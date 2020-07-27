@@ -4,8 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <div class="page-wrapper">
+
+        <nav id="navbar">
+            <header>JavaScript basics</header>
+            <ul>
+                <li><a class="nav-link" href="#What_is_JavaScript?">What is JavaScript?</a></li>
+                <li><a class="nav-link" href="#Hello_world!_example">Hello world! example</a></li>
+                <li><a class="nav-link" href="#What_happened?">What happened?</a></li>
+                <li><a class="nav-link" href="#Language_basics_crash_course">Language basics crash course</a></li>
+                <li><a class="nav-link" href="#Variables">Variables</a></li>
+                <li><a class="nav-link" href="#Comments">Comments</a></li>
+                <li><a class="nav-link" href="#Operators">Operators</a></li>
+                <li><a class="nav-link" href="#Conditionals">Conditionals</a></li>
+                <li><a class="nav-link" href="#Functions">Functions</a></li>
+                <li><a class="nav-link" href="#Events">Events</a></li>
+                <li><a class="nav-link" href="#More_about_it">More about it</a></li>
+            </ul>
+        </nav>
     
+        <main id="main-doc">
+            <section class="main-section" id="What_is_JavaScript?">
+                <header>What is JavaScript?</header>
+                <article>
+                    <p>JavaScript is a programming language that adds interactivity to your website. This happens in games, in the behavior of responses when buttons are pressed or with data entry on forms; with dynamic styling; with animation, etc. This article helps you get started with JavaScript and furthers your understanding of what is possible.</p>
+                    <p>JavaScript ("JS" for short) is a full-fledged dynamic programming language that can add interactivity to a website. It was invented by Brendan Eich (co-founder of the Mozilla project), the Mozilla Foundation, and the Mozilla Corporation.</p>
+                    <p>JavaScript is versatile and beginner-friendly. With more experience, you'll be able to create games, animated 2D and 3D graphics, comprehensive database-driven apps, and much more!</p>
+                    <p>JavaScript itself is relatively compact, yet very flexible. Developers have written a variety of tools on top of the core JavaScript language, unlocking a vast amount of functionality with minimum effort. These include:
+                        <ul>
+                            <li>Browser Application Programming Interfaces (APIs) built into web browsers, providing functionality such as dynamically creating HTML and setting CSS styles; collecting and manipulating a video stream from a user's webcam, or generating 3D graphics and audio samples.</li>
+                            <li>Third-party APIs that allow developers to incorporate functionality in sites from other content providers, such as Twitter or Facebook.</li>
+                            <li>Third-party frameworks and libraries that you can apply to HTML to accelerate the work of building sites and applications.</li>
+                        </ul>
+                    </p>
+                    <p>It's outside the scope of this article—as a light introduction to JavaScript—to present the details of how the core JavaScript language is different from the tools listed above. You can learn more in MDN's JavaScript learning area, as well as in other parts of MDN.</p>
+                    <p>The section below introduces some aspects of the core language, and offers an opportunity to play with a few browser API features too. Have fun!</p>
+                </article>
+            </section>
+            <section class="main-section" id="Hello_world!_example">
+                <header>Hello world! example</header>
+                <article>
+                    <p>JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, your websites will enter a new dimension of power and creativity.</p>
+                    <p>However, getting comfortable with JavaScript is more challenging than getting comfortable with HTML and CSS. You may have to start small, and progress gradually. To begin, let's examine how to add JavaScript to your page for creating a Hello world! example. (Hello world! is the standard for introductory programming examples.)</p>
+                    <ol>
+                        <li>Go to your test site and create a new folder named scripts. Within the scripts folder, create a new file called main.js, and save it.</li>
+                        <li>In your index.html file, enter this code on a new line, just before the closing <code><span>&lt;</span>/body<span>&gt</span></code> tag:
+                            <p><p><code><span><span><span>&lt;</span>script</span> <span>src</span><span><span>=</span><span>"</span>scripts/main.js<span>"</span></span><span>&gt;</span></span><span></span><span><span><span>&lt;/</span>script</span><span>&gt;</span></span><span><span></span></span></code></p></p>
+                        </li>
+                        <li>This is doing the same job as the <code><span>&lt</span>link<span>&gt</span></code> element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).</li>
+                        <li>Add this code to the main.js file:
+                            <p><code><span><br>const</span> myHeading <span>=</span> document<span>.</span><span>querySelector</span><span>(</span><span>'h1'</span><span>)</span><span>;</span><br>myHeading<span>.</span>textContent <span>=</span> <span>'Hello world!'</span><span>;</span><span><span></span><span></span></span></code></p>
+                        </li>
+                    </ol>
+                </article>
+            </section>
+            <section class="main-section" id="What_happened?">
+                <header>What happened?</header>
+                <article>
+                    <p>The heading text changed to <i>Hello world!</i> using JavaScript. You did this by using a function called <code>querySelector()</code> to grab a reference to your heading, and then store it in a variable called <code>myHeading</code>. This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.</p>
+                    <p>Following that, the code set the value of the <code>myHeading</code> variable's <code>textContent</code> property (which represents the content of the heading) to <i>Hello world!</i>.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Language_basics_crash_course">
+                <header>Language basics crash course</header>
+                <article>
+                    <p>To give you a better understanding of how JavaScript works, let's explain some of the core features of the language. It's worth noting that these features are common to all programming languages. If you master these fundamentals, you have a head start on coding in other languages too!</p>
+                </article>
+            </section>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <article>
+                    <p>Variables are containers that store values. You start by declaring a variable with the var (less recommended, dive deeper for the explanation) or the let keyword, followed by the name you give to the variable: <code>let myVariable;</code></p>
+                </article>
+            </section>
+            <section class="main-section" id="Comments">
+                <header>Comments</header>
+                <article>
+                    <p>Comments are snippets of text that can be added along with code. The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS: 
+                        <div class="code-wrap"><code>/*<br>Everything in between is a comment.<br>*/</code></div></p>
+                    <p>If your comment contains no line breaks, it's an option to put it behind two slashes like this:
+                        <div class="code-wrap"><code>// This is a comment</code></div>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Operators">
+                <header>Operators</header>
+                <article>
+                    <p>An operator is a mathematical symbol which produces a result based on two values (or variables). In the following table you can see some of the simplest operators, along with some examples to try in the JavaScript console.</p>
+                    <p>There are a lot more operators to explore, but this is enough for now. See Expressions and operators for <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators">A Complete List</a>.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Conditionals">
+                <header>Conditionals</header>
+                <article>
+                    <p>Conditionals are code structures used to test if an expression returns true or not. A very common form of conditionals is the if ... else statement. For example:</p>
+                    <div class="code-wrap">
+                        <code>let iceCream = 'chocolate';</code><br>
+                        <code>if(iceCream === 'chocolate') {</code><br>
+                        <code>alert('Yay, I love chocolate ice cream!');</code><br>
+                        <code>} else {</code><br>
+                        <code>  alert('Awwww, but chocolate is my favorite...');</code><br>
+                        <code>}</code>
+                    </div>
+                    <p>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="Functions">
+                <header>Functions</header>
+                <article>
+                    <p>Functions are a way of packaging functionality that you wish to reuse. It's possible to define a body of code as a function that executes when you call the function name in your code. This is a good alternative to repeatedly writing the same code. You have already seen some uses of functions previously. For example:</p>
+                    <div class="code-wrapp"><code>let myVariable = document.querySelector('h1');</code></div>
+                    <div class="code-wrapp"><code>alert('hello!');</code></div>
+                    <p><br>These functions, <code>document.querySelector</code> and <code>alert</code>, are built into the browser.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Events">
+                <header>Events</header>
+                <article>
+                    <p>Real interactivity on a website requires events handlers. These are code structures that listen for activity in the browser, and run code in response. The most obvious example is handling the click event, which is fired by the browser when you click on something with your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:</p>
+                    <div class="code-wrap">
+                        <code>document.querySelector('html').onclick = function() {</code><br>
+                        <code>    alert('Ouch! Stop poking me!');</code><br>
+                        <code>} </code>
+                    </div>
+                    <p></p>
+                    <p>There are many ways to attach an event handler to an element. Here we select the <code>&lthtml&gt</code> element, setting its <code>onclick</code> handler property equal to an anonymous (i.e. nameless) function, which contains the code we want the click event to run.</p>
+                </article>
+            </section>
+            <section class="main-section" id="More_about_it">
+                <header>More about it</header>
+                <article>If will follow all other instructions about <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" target="_blank">This Article</a>, you should end up with a page that looks something like the image below. You can also view <a href="https://mdn.github.io/beginner-html-site-scripted/" target="_blank">This Version</a>.</article>
+            </section>
+        </main>
+
+    </div>
+
 </body>
 </html>
